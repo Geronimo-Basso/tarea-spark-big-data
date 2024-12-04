@@ -21,7 +21,7 @@ if __name__ == '__main__':
 
     start = time.time()
     movies = spark.read.csv(
-        path='data/movies.csv',
+        path='hdfs://main:9000/user/22000015jorge/data/movielens/movies.csv',  # Lorca, Hadoop
         header=True,
         inferSchema=True,
         sep=',',
@@ -32,7 +32,8 @@ if __name__ == '__main__':
 
     start = time.time()
     ratings = spark.read.csv(
-        path='data/ratings.csv',
+        path='hdfs://main:9000/user/22000015jorge/data/movielens/ratings.csv',  # Lorca, Hadoop
+        #path='data/ratings.csv',
         header=True,
         inferSchema=True,
         sep=',',
